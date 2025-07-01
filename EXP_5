@@ -1,0 +1,98 @@
+<html> 
+<head> 
+    <style>body { 
+font-family: Arial, sans-serif; 
+background: grey; 
+display: flex; 
+justify-content: center; 
+padding-top: 50px; 
+} 
+.container { 
+background: white; 
+padding:20px 40px; 
+border-radius: 8px; 
+width: 300px; 
+} 
+input,span{ 
+width: 100%; 
+margin-bottom: 10px; 
+padding: 10px; 
+border: 1px solid #ddd; 
+border-radius: 4px; 
+} 
+.note 
+{ 
+color:red; 
+font-size:14px; 
+} 
+.btn { 
+margin-left:15px; 
+align:center; 
+background: #28a745; 
+border-radius: 4px; 
+}</style>
+<title>Registration Form</title> 
+<link rel="stylesheet" href="Registerstylescript.css"> 
+</head> 
+<body> 
+<div class="container"> 
+<h2>Registration Form</h2> 
+<form id="RegistrationForm"> 
+<input type="text" name="name" placeholder="Your Name" id="name" required> 
+<input type="text" name="username" placeholder="User Name" id="username" required> 
+<span class="note" id="une"></span> 
+<input type="password" placeholder="Password" name="pass" id="pass" required> 
+<span class="note" id="pe"></span> 
+<input type="password" placeholder="Retype Password" name="repass" id="repass" 
+required> 
+<span class="note" id="rpe"></span> 
+<input type="email" placeholder="email" name="email" id="email" required> 
+<span class="note" id="ee"></span> 
+<input type="number" placeholder="Phone No" name="pno" id="pno" required> 
+<span class="note" id="pne"></span> 
+<input type="date" placeholder="Date of birth" name="dob" id="dob" required> 
+<input class="btn" type="submit" value="Register"> 
+</form> 
+</div> 
+<script> 
+var s=true; 
+document.getElementById('RegistrationForm').addEventListener('submit', function(e) { 
+e.preventDefault(); 
+// Get input values 
+const username = document.getElementById('username').value.trim(); 
+const email = document.getElementById('email').value.trim(); 
+const password = document.getElementById('pass').value; 
+const confirmPassword = document.getElementById('repass').value; 
+const phone=document.getElementById('pno').value; 
+// Username validation 
+if (username.length < 3) { 
+s=false; 
+document.getElementById('une').innerHTML = 'Username must be at least 3 characters.'; 
+} 
+// Email validation 
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { 
+document.getElementById('ee').innerHTML = 'Invalid email format.'; 
+s=false; 
+} 
+// Password validation 
+if (password.length < 6) { 
+document.getElementById('pe').innerHTML = 'Password must be at least 6 characters.'; 
+s=false;   
+} 
+{   
+} 
+// Confirm Password match 
+if (password !== confirmPassword) { 
+document.getElementById('rpe').innerHTML = 'Passwords do not match.'; 
+s=false; 
+} 
+if(!/^[9|8|7|6]([0-9]{9})$/.test(phone)) 
+document.getElementById('pne').innerHTML="Phone Number not Exist"; 
+s=false; 
+if (s) { 
+alert('Form is valid. Submitting...'); 
+} 
+}); 
+</script> 
+</body> 
+</html> 
