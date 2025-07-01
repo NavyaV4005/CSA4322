@@ -1,0 +1,48 @@
+<html> 
+<head>
+    <style>body { 
+font-family: Arial, sans-serif; 
+background: grey; 
+display: flex; 
+justify-content: center; 
+padding-top: 50px; 
+} 
+.container { 
+background: white; 
+padding:20px 40px; 
+border-radius: 8px; 
+width: 300px; 
+} 
+input{ 
+width: 100%; 
+margin-bottom: 10px; 
+padding: 10px; 
+border: 1px solid #ddd; 
+border-radius: 4px; 
+} 
+.btn { 
+margin-left:15px; 
+align:center; 
+background: #28a745; 
+border-radius: 4px; 
+}</style> 
+<title>Registration Form</title> 
+<link rel="stylesheet" href=" Registerstyle.css"> 
+</head> 
+<body> 
+<div class="container">    
+<h2>Registration Form</h2> 
+<form> 
+<input type="text" name="name" placeholder="Your Name" id="name" required> 
+<input type="text" name="username" placeholder="User Name" id="username" required> 
+<input type="password" placeholder="Password" name="pass" id="pass" required> 
+<input type="password" placeholder="Retype Password" name="repass" id="repass" 
+required> 
+<input type="email" placeholder="email" name="email" id="email" required> 
+<input type="number" placeholder="Phone No" name="pno" id="pno" required> 
+<input type="date" placeholder="Date of birth" name="dob" id="dob" required> 
+<input class="btn" type="submit" value="Register"> 
+</form> 
+</div> 
+</body> 
+</html>
