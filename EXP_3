@@ -1,0 +1,48 @@
+
+<html> 
+<head> 
+    <style>body { 
+font-family: Arial, sans-serif; 
+background: lightblue; 
+display: flex; 
+justify-content: center; 
+padding:150px; 
+} 
+.container { 
+background: white; 
+padding:20px 40px; 
+border-radius: 8px; 
+width: 300px; 
+} 
+input{ 
+width: 100%; 
+margin-bottom: 20px; 
+padding: 10px; 
+border: 1px solid #ddd; 
+border-radius: 4px; 
+} 
+.btn { 
+margin-top:15px; 
+margin-left:70px; 
+width:50%; 
+align:center; 
+background: orange; 
+border-radius:7px; 
+}</style>
+<title>Login Form</title> 
+<link rel="stylesheet" href=”Loginstyle.css"> 
+</head> 
+<body> 
+<div class="container"> 
+<h2>Login Form</h2> 
+<form> 
+<input type="text" name="username" placeholder="User Name" id="username" 
+required> 
+<input type="password" placeholder="Password" name="pass" id="pass" required> 
+<input class="btn" type="submit" value="Login"> 
+</form> 
+</div> 
+</body> 
+</html>
+
+
